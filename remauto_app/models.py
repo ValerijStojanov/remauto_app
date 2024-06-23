@@ -1,16 +1,18 @@
 from django.db import models
-
-# Create your models here.
-
-from django.db import models
 import random
-from django.core.validators import MinLengthValidator
+from django.core.validators import MinLengthValidator, RegexValidator
 
 class Client(models.Model):
-    name = models.CharField(max_length=100)
-    surname = models.CharField(max_length=100)
-    phone_number = models.CharField(max_length=20, unique=True)
-    email = models.EmailField(unique=True)
+    name = models.CharField(max_length=100, blank=False)
+    surname = models.CharField(max_length=100, blank=False)
+    phone_number = models.CharField(max_length=30, blank=False, unique=True,validators=[
+        RegexValidator(
+            regex=r'^\+\d{1,3}\d{6,14}$',
+            message='Phone number must be entered in the format: "+999999999". Up to 15 digits allowed.'
+        ),
+        MinLengthValidator(7)  # Minimum length for phone number
+    ])
+    email = models.EmailField(unique=True, blank=False)
     telegram = models.CharField(max_length=100, blank=True, null=True)
     whatsapp = models.CharField(max_length=20, blank=True, null=True)
     viber = models.CharField(max_length=20, blank=True, null=True)
