@@ -1,3 +1,72 @@
-body {
-    background-color: red;
+html {
+    background-color: rgb(3, 3, 36);
 }
+
+h1, h2 {
+    color: white;
+}
+p {
+    color: purple;
+    
+}
+
+a {
+    text-decoration: none;
+    color: aquamarine;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+form {
+    max-width: 400px; /* Максимальная ширина формы */
+    margin: 0 auto; /* Центрирование формы по горизонтали */
+    padding: 20px; /* Внутренний отступ формы */
+    border: 1px solid #ccc; /* Рамка формы */
+    border-radius: 5px; /* Скругление углов формы */
+    font-family: Arial, sans-serif; /* Шрифт */
+    background-color: #f9f9f9; /* Цвет фона формы */
+}
+
+form p {
+    margin-bottom: 15px; /* Отступ между параграфами */
+}
+
+form label {
+    display: block; /* Блочный элемент */
+    font-weight: bold; /* Жирный шрифт для меток */
+    margin-bottom: 5px; /* Отступ между метками и полями ввода */
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 100%; /* Ширина полей ввода на всю доступную ширину */
+    padding: 8px; /* Внутренний отступ в полях ввода */
+    border: 1px solid #ddd; /* Рамка полей ввода */
+    border-radius: 4px; /* Скругление углов полей ввода */
+    box-sizing: border-box; /* Учет padding и border в общей ширине элемента */
+    margin-top: 5px; /* Отступ сверху для полей ввода */
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus {
+    outline: none; /* Убираем рамку при фокусе */
+    border-color: #66afe9; /* Цвет рамки при фокусе */
+}
+
+form button[type="submit"] {
+    background-color: #4CAF50; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    padding: 10px 20px; /* Внутренний отступ кнопки */
+    border: none; /* Убираем рамку кнопки */
+    border-radius: 4px; /* Скругление углов кнопки */
+    cursor: pointer; /* Указатель при наведении на кнопку */
+    margin-top: 10px; /* Отступ сверху для кнопки */
+}
+
+form button[type="submit"]:hover {
+    background-color: #45a049; /* Цвет фона кнопки при наведении */
+}
+
