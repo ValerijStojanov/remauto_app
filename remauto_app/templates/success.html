@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Success Page</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Success{% endblock %}
+
+{% block content %}
     <h1>Success Page</h1>
     <p style="color: green;">Клиент успешно добавлен!</p>
-    <h1>Код авторизации: {{ auth_code }}</h1>  <!-- Здесь выводится авторизационный код -->
-    <p><a href="/">На главную</a></p>  <!-- Ссылка на главную страницу -->
-</body>
-</html>
+    <h1>Код авторизации: {{ auth_code }}</h1> 
+    <p><a href="/">На главную</a></p> 
+{% endblock %}
