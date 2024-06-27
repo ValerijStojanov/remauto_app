@@ -1,0 +1,44 @@
+# Django-specific ignores
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media
+*.py[cod]
+*.pyo
+*.so
+*.manifest
+*.spec
+
+# # If you are using PostgreSQL
+# *.pgpass
+
+# # If you are using MySQL
+# *.my.cnf
+
+# # If you are using SQLite
+# *.sqlite3
+
+# Django migrations
+*/migrations/*
+!*/migrations/__init__.py
+
+# Static files
+# staticfiles/
+# static/
+
+# Local environment settings
+.env
+.env.*
+
+# VS Code specific ignores
+.vscode/
+
+# PyCharm specific ignores
+.idea/
+
+# macOS specific ignores
+.DS_Store
+
+# Windows
